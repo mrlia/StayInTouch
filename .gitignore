@@ -165,4 +165,5 @@ pip-log.txt
 
 # Play
 logs/application.log
+.target/
 
