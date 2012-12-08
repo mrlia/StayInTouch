@@ -9,7 +9,7 @@
     <ul>
         @contacts.map { contact =>
             <li>
-                @contact.name
+                <a href="@routes.Application.getContactDetails(contact.name)">@contact.name</a>
                 
                 @*form(routes.Application.deleteTask(contact.id)) {
                     <input type="submit" value="Delete">
