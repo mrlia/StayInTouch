@@ -1,7 +1,31 @@
-@(message: String)
+@(contacts: List[Contact], contactForm: Form[String])
 
-@main("Welcome to Play 2.0") {
+@import helper._
+
+@main("Contacts") {
     
-    @play20.welcome(message)
+    <h1>@contacts.size contact(s)</h1>
+    
+    <ul>
+        @contacts.map { contact =>
+            <li>
+                @contact.name
+                
+                @*form(routes.Application.deleteTask(contact.id)) {
+                    <input type="submit" value="Delete">
+                }*@
+            </li>
+        }
+    </ul>
+    
+    <h2>Add a new contact</h2>
+    
+    @form(routes.Application.newContact) {
+        
+        @inputText(contactForm("name")) 
+        
+        <input type="submit" value="Create">
+        
+    }
     
 }

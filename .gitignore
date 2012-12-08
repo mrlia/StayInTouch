@@ -164,5 +164,5 @@ pip-log.txt
 .DS_Store
 
 # Play
-log/application.log
+logs/application.log
 

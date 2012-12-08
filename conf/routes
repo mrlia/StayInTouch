@@ -6,6 +6,7 @@
 GET     /                           controllers.Application.list
 GET     /listing                    controllers.Application.list
 GET		/contact/:name				controllers.Application.getContactDetails(name: String)
+POST	/listing					controllers.Application.newContact
 
 
 
